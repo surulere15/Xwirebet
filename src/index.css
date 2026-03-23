@@ -13,8 +13,8 @@
 }
 
 /* ═══════════════════════════════════════════════
-   WIREBET — LUXURY INTERFACE SYSTEM v3.1
-   Hierarchy: wordmark → subtitle → body → CTA → footer
+   WIREBET — LUXURY INTERFACE SYSTEM v3.2
+   "100% Polish" Body Authority Edition
    ═══════════════════════════════════════════════ */
 
 /* ── Atmospheric Background ─────────────────── */
@@ -42,7 +42,7 @@
   background:
     radial-gradient(
       ellipse 38% 28% at 50% 60%,
-      rgba(180, 175, 168, 0.012) 0%,
+      rgba(180, 175, 168, 0.015) 0%,
       transparent 100%
     );
   pointer-events: none;
@@ -65,7 +65,7 @@
     linear-gradient(
       180deg,
       transparent 0%,
-      rgba(2, 2, 3, 0.65) 100%
+      rgba(2, 2, 3, 0.6) 100%
     );
   pointer-events: none;
   z-index: 1;
@@ -82,17 +82,17 @@
   background:
     radial-gradient(
       ellipse 28% 20% at 50% 50%,
-      rgba(255, 255, 255, 0.028) 0%,
+      rgba(255, 255, 255, 0.035) 0%,
       transparent 100%
     ),
     radial-gradient(
       ellipse 50% 38% at 50% 50%,
-      rgba(255, 255, 255, 0.01) 0%,
+      rgba(255, 255, 255, 0.012) 0%,
       transparent 100%
     ),
     radial-gradient(
       ellipse 70% 55% at 50% 50%,
-      rgba(255, 255, 255, 0.004) 0%,
+      rgba(255, 255, 255, 0.005) 0%,
       transparent 100%
     );
   filter: blur(80px);
@@ -100,36 +100,32 @@
   z-index: 1;
 }
 
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   HIERARCHY LAYER 1 — WORDMARK (strongest)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ── Wordmark — Silver Authority ─────────────── */
 .wordmark {
   text-shadow:
-    0 0 60px rgba(255, 255, 255, 0.06),
-    0 0 140px rgba(255, 255, 255, 0.025),
-    0 3px 15px rgba(0, 0, 0, 0.6);
+    0 0 60px rgba(255, 255, 255, 0.08),
+    0 0 140px rgba(255, 255, 255, 0.03),
+    0 3px 15px rgba(0, 0, 0, 0.65);
   background: linear-gradient(
     178deg,
     rgba(255, 255, 255, 1) 0%,
-    rgba(248, 247, 246, 0.95) 25%,
-    rgba(225, 223, 220, 0.8) 55%,
-    rgba(195, 193, 190, 0.65) 100%
+    rgba(250, 249, 248, 0.98) 25%,
+    rgba(228, 226, 223, 0.85) 55%,
+    rgba(200, 198, 195, 0.72) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   HIERARCHY LAYER 2 — SUBTITLE (clear, secondary)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ── Subtitle — Clear Focus ─────────────────── */
 .subtitle-text {
   background: linear-gradient(
     90deg,
-    rgba(170, 170, 178, 0.65) 0%,
-    rgba(200, 200, 208, 0.9) 35%,
-    rgba(200, 200, 208, 0.9) 65%,
-    rgba(170, 170, 178, 0.65) 100%
+    rgba(175, 175, 182, 0.75) 0%,
+    rgba(215, 215, 224, 0.98) 35%,
+    rgba(215, 215, 224, 0.98) 65%,
+    rgba(175, 175, 182, 0.75) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -137,31 +133,33 @@
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   HIERARCHY LAYER 3 — BODY COPY (soft, tertiary)
+   LAYER 3 — BODY COPY (100% Polish)
+   "Significant legibility, soft authority"
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .body-text {
-  color: rgba(161, 161, 170, 0.58);
+  color: rgba(212, 212, 216, 0.78);
+  text-shadow: 0 0 40px rgba(255, 255, 255, 0.015);
+  font-weight: 350;
+  letter-spacing: 0.04em;
 }
 
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   HIERARCHY LAYER 4 — BUTTONS (action, defined)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ── Buttons ────────────────────────────────── */
 .glass-btn {
   position: relative;
   background:
     linear-gradient(
       178deg,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0.018) 45%,
-      rgba(255, 255, 255, 0.025) 100%
+      rgba(255, 255, 255, 0.055) 0%,
+      rgba(255, 255, 255, 0.02) 45%,
+      rgba(255, 255, 255, 0.028) 100%
     );
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px) saturate(130%) brightness(95%);
   -webkit-backdrop-filter: blur(20px) saturate(130%) brightness(95%);
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.045) inset,
     0 -1px 0 0 rgba(0, 0, 0, 0.3) inset,
     0 1px 2px rgba(0, 0, 0, 0.2),
     0 4px 16px rgba(0, 0, 0, 0.35),
@@ -178,9 +176,9 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.1) 25%,
-    rgba(255, 255, 255, 0.16) 50%,
-    rgba(255, 255, 255, 0.1) 75%,
+    rgba(255, 255, 255, 0.12) 25%,
+    rgba(255, 255, 255, 0.18) 50%,
+    rgba(255, 255, 255, 0.12) 75%,
     transparent 100%
   );
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
@@ -195,8 +193,8 @@
   background:
     linear-gradient(
       178deg,
-      rgba(255, 255, 255, 0.055) 0%,
-      rgba(255, 255, 255, 0.012) 25%,
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(255, 255, 255, 0.015) 25%,
       transparent 55%
     );
   opacity: 0;
@@ -208,102 +206,30 @@
   background:
     linear-gradient(
       178deg,
-      rgba(255, 255, 255, 0.07) 0%,
-      rgba(255, 255, 255, 0.028) 45%,
-      rgba(255, 255, 255, 0.035) 100%
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.035) 45%,
+      rgba(255, 255, 255, 0.045) 100%
     );
-  border-color: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.16);
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.06) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.07) inset,
     0 -1px 0 0 rgba(0, 0, 0, 0.25) inset,
     0 1px 3px rgba(0, 0, 0, 0.25),
     0 6px 24px rgba(0, 0, 0, 0.4),
     0 16px 48px rgba(0, 0, 0, 0.2),
-    0 0 50px rgba(255, 255, 255, 0.015);
+    0 0 50px rgba(255, 255, 255, 0.02);
   transform: translateY(-0.5px);
 }
 
-.glass-btn:hover::before {
-  left: 6%;
-  right: 6%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.12) 20%,
-    rgba(255, 255, 255, 0.22) 50%,
-    rgba(255, 255, 255, 0.12) 80%,
-    transparent 100%
-  );
-}
-
-.glass-btn:hover::after {
-  opacity: 1;
-}
-
-/* Primary — commanding */
 .glass-btn-primary {
-  border-color: rgba(255, 255, 255, 0.12);
-  box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.05) inset,
-    0 -1px 0 0 rgba(0, 0, 0, 0.35) inset,
-    0 1px 2px rgba(0, 0, 0, 0.2),
-    0 4px 20px rgba(0, 0, 0, 0.4),
-    0 12px 44px rgba(0, 0, 0, 0.18),
-    0 0 1px rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
-.glass-btn-primary:hover {
-  border-color: rgba(255, 255, 255, 0.18);
-  box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.08) inset,
-    0 -1px 0 0 rgba(0, 0, 0, 0.3) inset,
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    0 8px 32px rgba(0, 0, 0, 0.45),
-    0 20px 56px rgba(0, 0, 0, 0.22),
-    0 0 1px rgba(255, 255, 255, 0.1);
-}
-
-/* Secondary — noticeably quieter than primary */
 .glass-btn-secondary {
-  background:
-    linear-gradient(
-      178deg,
-      rgba(255, 255, 255, 0.03) 0%,
-      rgba(255, 255, 255, 0.01) 45%,
-      rgba(255, 255, 255, 0.015) 100%
-    );
-  border-color: rgba(255, 255, 255, 0.065);
-  box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.025) inset,
-    0 -1px 0 0 rgba(0, 0, 0, 0.2) inset,
-    0 1px 2px rgba(0, 0, 0, 0.15),
-    0 4px 12px rgba(0, 0, 0, 0.25),
-    0 8px 28px rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
-.glass-btn-secondary::before {
-  opacity: 0.55;
-}
-
-.glass-btn-secondary:hover {
-  background:
-    linear-gradient(
-      178deg,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0.02) 45%,
-      rgba(255, 255, 255, 0.025) 100%
-    );
-  border-color: rgba(255, 255, 255, 0.11);
-  box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
-    0 -1px 0 0 rgba(0, 0, 0, 0.2) inset,
-    0 1px 3px rgba(0, 0, 0, 0.2),
-    0 6px 20px rgba(0, 0, 0, 0.35),
-    0 12px 36px rgba(0, 0, 0, 0.15),
-    0 0 1px rgba(255, 255, 255, 0.05);
-}
-
-/* ── Liquid Reflection Layer ────────────────── */
+/* ── Liquid Reflection ───────────────────────── */
 .liquid-layer {
   position: absolute;
   bottom: 0;
@@ -325,10 +251,8 @@
   z-index: 1;
 }
 
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   HIERARCHY LAYER 5 — MICRO-COPY (whisper)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ── Micro-copy ────────────────────────────── */
 .micro-copy {
-  color: rgba(255, 255, 255, 0.22);
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.012);
+  color: rgba(255, 255, 255, 0.25);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.015);
 }
