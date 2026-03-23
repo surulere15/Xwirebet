@@ -10,27 +10,27 @@ export default function Hero() {
       {/* Liquid reflection floor */}
       <div className="liquid-layer" />
 
-      {/* Cinematic vignette — tighter, darker */}
+      {/* Cinematic vignette */}
       <div 
         className="absolute inset-0 pointer-events-none z-[1]"
         style={{
           background: `
             radial-gradient(
-              ellipse 70% 70% at 50% 48%,
-              transparent 25%,
-              rgba(0, 0, 0, 0.55) 100%
+              ellipse 72% 72% at 50% 48%,
+              transparent 28%,
+              rgba(0, 0, 0, 0.5) 100%
             )
           `
         }}
       />
 
-      {/* Glass horizon — spatial depth marker */}
+      {/* Glass horizon line */}
       <div 
         className="absolute left-0 right-0 pointer-events-none z-[1]"
         style={{
           top: '63%',
           height: '1px',
-          background: 'linear-gradient(90deg, transparent 18%, rgba(255,255,255,0.015) 35%, rgba(255,255,255,0.025) 50%, rgba(255,255,255,0.015) 65%, transparent 82%)'
+          background: 'linear-gradient(90deg, transparent 18%, rgba(255,255,255,0.018) 35%, rgba(255,255,255,0.028) 50%, rgba(255,255,255,0.018) 65%, transparent 82%)'
         }}
       />
 
@@ -40,12 +40,12 @@ export default function Hero() {
         transition={{ duration: 2.4, ease: [0.16, 1, 0.3, 1] }}
         className="z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center"
       >
-        {/* Wordmark */}
+        {/* Wordmark — commanding silver-white */}
         <h1 className="wordmark text-6xl md:text-8xl lg:text-[9.5rem] font-display font-medium tracking-[0.12em] mb-7 leading-none select-none">
           WIREBET
         </h1>
 
-        {/* Subtitle */}
+        {/* Subtitle — readable metallic */}
         <motion.h2 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -55,7 +55,7 @@ export default function Hero() {
           PREDICTION MARKETS POWERED BY CRYPTO
         </motion.h2>
         
-        {/* Body */}
+        {/* Body — soft but legible */}
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -74,13 +74,13 @@ export default function Hero() {
         >
           <a 
             href="#" 
-            className="glass-btn glass-btn-primary w-full py-[15px] text-white/80 font-medium text-[10.5px] tracking-[0.22em] uppercase text-center relative z-10"
+            className="glass-btn glass-btn-primary w-full py-[15px] text-white/90 font-medium text-[10.5px] tracking-[0.22em] uppercase text-center relative z-10"
           >
             STRATEGIC ACCESS
           </a>
           <a 
             href="#" 
-            className="glass-btn glass-btn-secondary w-full py-[15px] text-zinc-500 font-medium text-[10.5px] tracking-[0.22em] uppercase hover:text-zinc-400 text-center relative z-10 transition-colors duration-700"
+            className="glass-btn glass-btn-secondary w-full py-[15px] text-zinc-400 font-medium text-[10.5px] tracking-[0.22em] uppercase hover:text-zinc-300 text-center relative z-10 transition-colors duration-700"
           >
             DOWNLOAD BRIEF
           </a>

@@ -13,7 +13,8 @@
 }
 
 /* ═══════════════════════════════════════════════
-   WIREBET — LUXURY INTERFACE SYSTEM v2.1
+   WIREBET — LUXURY INTERFACE SYSTEM v3.0
+   Dark authority · Commanding presence · Premium
    ═══════════════════════════════════════════════ */
 
 /* ── Atmospheric Background ─────────────────── */
@@ -30,7 +31,6 @@
   overflow: hidden;
 }
 
-/* — Top haze — barely-there warmth above the wordmark */
 .luxury-bg::before {
   content: '';
   position: absolute;
@@ -49,7 +49,6 @@
   z-index: 1;
 }
 
-/* — Floor gradient — dark sink at the base */
 .luxury-bg::after {
   content: '';
   position: absolute;
@@ -72,8 +71,7 @@
   z-index: 1;
 }
 
-/* ── Hero Glow ──────────────────────────────── */
-/* Three concentric radials for soft, controlled bloom */
+/* ── Hero Glow — controlled bloom ───────────── */
 .hero-glow {
   position: absolute;
   top: 30%;
@@ -84,17 +82,17 @@
   background:
     radial-gradient(
       ellipse 30% 22% at 50% 50%,
-      rgba(255, 255, 255, 0.014) 0%,
+      rgba(255, 255, 255, 0.02) 0%,
       transparent 100%
     ),
     radial-gradient(
       ellipse 50% 38% at 50% 50%,
-      rgba(255, 255, 255, 0.006) 0%,
+      rgba(255, 255, 255, 0.008) 0%,
       transparent 100%
     ),
     radial-gradient(
       ellipse 70% 55% at 50% 50%,
-      rgba(255, 255, 255, 0.003) 0%,
+      rgba(255, 255, 255, 0.004) 0%,
       transparent 100%
     );
   filter: blur(90px);
@@ -102,17 +100,18 @@
   z-index: 1;
 }
 
-/* ── Wordmark — platinum-to-smoke gradient ──── */
+/* ── Wordmark — commanding silver-white ─────── */
 .wordmark {
   text-shadow:
-    0 0 100px rgba(255, 255, 255, 0.02),
-    0 4px 30px rgba(0, 0, 0, 0.9);
+    0 0 80px rgba(255, 255, 255, 0.04),
+    0 0 200px rgba(255, 255, 255, 0.015),
+    0 4px 20px rgba(0, 0, 0, 0.7);
   background: linear-gradient(
-    176deg,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(220, 218, 216, 0.78) 35%,
-    rgba(170, 168, 165, 0.52) 65%,
-    rgba(130, 128, 126, 0.38) 100%
+    178deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(245, 244, 242, 0.92) 30%,
+    rgba(210, 208, 205, 0.72) 65%,
+    rgba(180, 178, 175, 0.58) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -125,24 +124,24 @@
   background:
     linear-gradient(
       178deg,
-      rgba(255, 255, 255, 0.032) 0%,
-      rgba(255, 255, 255, 0.008) 45%,
-      rgba(255, 255, 255, 0.014) 100%
+      rgba(255, 255, 255, 0.045) 0%,
+      rgba(255, 255, 255, 0.015) 45%,
+      rgba(255, 255, 255, 0.022) 100%
     );
-  border: 1px solid rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px) saturate(130%) brightness(95%);
   -webkit-backdrop-filter: blur(20px) saturate(130%) brightness(95%);
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.025) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.035) inset,
     0 -1px 0 0 rgba(0, 0, 0, 0.3) inset,
     0 1px 2px rgba(0, 0, 0, 0.2),
     0 4px 16px rgba(0, 0, 0, 0.35),
     0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Top-edge gloss — premium highlight bead */
+/* Top-edge gloss bead */
 .glass-btn::before {
   content: '';
   position: absolute;
@@ -153,9 +152,9 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.06) 25%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0.06) 75%,
+    rgba(255, 255, 255, 0.08) 25%,
+    rgba(255, 255, 255, 0.14) 50%,
+    rgba(255, 255, 255, 0.08) 75%,
     transparent 100%
   );
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
@@ -163,7 +162,7 @@
   z-index: 2;
 }
 
-/* Surface sweep — liquid gloss on hover */
+/* Surface sweep */
 .glass-btn::after {
   content: '';
   position: absolute;
@@ -171,8 +170,8 @@
   background:
     linear-gradient(
       178deg,
-      rgba(255, 255, 255, 0.04) 0%,
-      rgba(255, 255, 255, 0.008) 25%,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.01) 25%,
       transparent 55%
     );
   opacity: 0;
@@ -184,18 +183,18 @@
   background:
     linear-gradient(
       178deg,
-      rgba(255, 255, 255, 0.048) 0%,
-      rgba(255, 255, 255, 0.016) 45%,
-      rgba(255, 255, 255, 0.022) 100%
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(255, 255, 255, 0.022) 45%,
+      rgba(255, 255, 255, 0.03) 100%
     );
-  border-color: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.12);
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.05) inset,
     0 -1px 0 0 rgba(0, 0, 0, 0.25) inset,
     0 1px 3px rgba(0, 0, 0, 0.25),
     0 6px 24px rgba(0, 0, 0, 0.4),
     0 16px 48px rgba(0, 0, 0, 0.2),
-    0 0 50px rgba(255, 255, 255, 0.01);
+    0 0 50px rgba(255, 255, 255, 0.012);
   transform: translateY(-0.5px);
 }
 
@@ -205,9 +204,9 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.08) 20%,
-    rgba(255, 255, 255, 0.15) 50%,
-    rgba(255, 255, 255, 0.08) 80%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 80%,
     transparent 100%
   );
 }
@@ -216,41 +215,41 @@
   opacity: 1;
 }
 
-/* Primary — slightly more glass presence */
+/* Primary — stronger glass presence */
 .glass-btn-primary {
-  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.1);
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.035) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
     0 -1px 0 0 rgba(0, 0, 0, 0.35) inset,
     0 1px 2px rgba(0, 0, 0, 0.2),
     0 4px 20px rgba(0, 0, 0, 0.4),
     0 12px 44px rgba(0, 0, 0, 0.18),
-    0 0 1px rgba(255, 255, 255, 0.04);
+    0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 .glass-btn-primary:hover {
-  border-color: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.16);
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.06) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.07) inset,
     0 -1px 0 0 rgba(0, 0, 0, 0.3) inset,
     0 2px 4px rgba(0, 0, 0, 0.3),
     0 8px 32px rgba(0, 0, 0, 0.45),
     0 20px 56px rgba(0, 0, 0, 0.22),
-    0 0 1px rgba(255, 255, 255, 0.06);
+    0 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* Secondary — recessed, quieter */
+/* Secondary — quieter but readable */
 .glass-btn-secondary {
   background:
     linear-gradient(
       178deg,
-      rgba(255, 255, 255, 0.016) 0%,
-      rgba(255, 255, 255, 0.004) 45%,
-      rgba(255, 255, 255, 0.008) 100%
+      rgba(255, 255, 255, 0.025) 0%,
+      rgba(255, 255, 255, 0.008) 45%,
+      rgba(255, 255, 255, 0.013) 100%
     );
-  border-color: rgba(255, 255, 255, 0.035);
+  border-color: rgba(255, 255, 255, 0.06);
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.015) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.02) inset,
     0 -1px 0 0 rgba(0, 0, 0, 0.2) inset,
     0 1px 2px rgba(0, 0, 0, 0.15),
     0 4px 12px rgba(0, 0, 0, 0.25),
@@ -258,20 +257,20 @@
 }
 
 .glass-btn-secondary::before {
-  opacity: 0.45;
+  opacity: 0.6;
 }
 
 .glass-btn-secondary:hover {
   background:
     linear-gradient(
       178deg,
-      rgba(255, 255, 255, 0.032) 0%,
-      rgba(255, 255, 255, 0.012) 45%,
-      rgba(255, 255, 255, 0.016) 100%
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.016) 45%,
+      rgba(255, 255, 255, 0.022) 100%
     );
-  border-color: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.1);
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.03) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
     0 -1px 0 0 rgba(0, 0, 0, 0.2) inset,
     0 1px 3px rgba(0, 0, 0, 0.2),
     0 6px 20px rgba(0, 0, 0, 0.3),
@@ -312,27 +311,27 @@
   z-index: 1;
 }
 
-/* ── Micro-copy ─────────────────────────────── */
-.micro-copy {
-  color: rgba(255, 255, 255, 0.12);
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.008);
-}
-
-/* ── Subtitle — metallic horizontal gradient ── */
+/* ── Subtitle — metallic with restored presence ── */
 .subtitle-text {
   background: linear-gradient(
     90deg,
-    rgba(140, 140, 148, 0.55) 0%,
-    rgba(161, 161, 170, 0.8) 40%,
-    rgba(161, 161, 170, 0.8) 60%,
-    rgba(140, 140, 148, 0.55) 100%
+    rgba(161, 161, 170, 0.7) 0%,
+    rgba(190, 190, 198, 0.95) 40%,
+    rgba(190, 190, 198, 0.95) 60%,
+    rgba(161, 161, 170, 0.7) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* ── Body text refinement ───────────────────── */
+/* ── Body text — legible but soft ───────────── */
 .body-text {
-  color: rgba(113, 113, 122, 0.85);
+  color: rgba(161, 161, 170, 0.65);
+}
+
+/* ── Micro-copy — intentional, not faded ────── */
+.micro-copy {
+  color: rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.01);
 }
