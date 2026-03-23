@@ -24,10 +24,10 @@ export default function WhyWirebet() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="mb-20 flex flex-col items-center"
+          className="mb-24 flex flex-col items-center"
         >
-          <div className="w-[1px] h-12 bg-white/30 mb-8" />
-          <h2 className="text-3xl md:text-4xl font-display font-medium tracking-wide text-white">Strategic Advantage</h2>
+          <div className="w-[1px] h-16 bg-white/40 mb-10" />
+          <h2 className="text-3xl md:text-5xl font-display font-medium tracking-wide text-white">Strategic Advantage</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -38,10 +38,12 @@ export default function WhyWirebet() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: idx * 0.1 }}
-              className="bg-[#0a0a0a] border border-white/20 p-10 hover:border-white/40 hover:bg-[#111111] transition-all duration-500 flex flex-col items-center text-center shadow-2xl"
+              className="bg-[#0f0f0f] border border-white/10 p-12 hover:border-white/30 hover:shadow-2xl transition-all duration-500 flex flex-col items-start text-left relative overflow-hidden group"
             >
-              <h3 className="text-xl font-display font-medium text-white mb-4 tracking-wide">{feature.title}</h3>
-              <p className="text-zinc-300 font-normal leading-relaxed tracking-wide text-base">{feature.description}</p>
+              <div className="absolute top-0 left-0 w-full h-1 bg-white/5 group-hover:bg-white/20 transition-colors" />
+              <span className="text-xs font-mono text-zinc-500 mb-6 group-hover:text-zinc-400 transition-colors">{(idx + 1).toString().padStart(2, '0')} //</span>
+              <h3 className="text-xl md:text-2xl font-display font-medium text-white mb-4 tracking-wide group-hover:text-white">{feature.title}</h3>
+              <p className="text-zinc-400 font-normal leading-relaxed tracking-wide text-base">{feature.description}</p>
             </motion.div>
           ))}
         </div>

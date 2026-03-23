@@ -18,8 +18,8 @@ export default function WhyThisAsset() {
           transition={{ duration: 0.8 }}
           className="md:w-1/3 shrink-0"
         >
-          <h2 className="text-2xl md:text-3xl font-display font-medium tracking-wide text-white">Asset Profile</h2>
-          <p className="text-zinc-400 font-normal mt-4 text-base tracking-wide leading-relaxed">Fundamental acquisition rationale.</p>
+          <h2 className="text-3xl md:text-4xl font-display font-medium tracking-wide text-white">Asset Profile</h2>
+          <p className="text-zinc-400 font-normal mt-6 text-base md:text-lg tracking-wide leading-relaxed">Fundamental acquisition rationale.</p>
         </motion.div>
         
         <motion.div 
@@ -30,9 +30,9 @@ export default function WhyThisAsset() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {points.map((point, idx) => (
-            <div key={idx} className="flex items-center gap-6 py-5 px-6 bg-[#0a0a0a] border border-white/20 hover:border-white/40 transition-colors duration-500 rounded-sm">
-              <span className="text-sm font-mono font-medium text-white/50">{(idx + 1).toString().padStart(2, '0')}</span>
-              <p className="text-base md:text-lg font-medium text-white tracking-wide">
+            <div key={idx} className="flex flex-col sm:flex-row sm:items-center gap-6 py-6 px-8 bg-[#0a0a0a] border border-white/10 hover:border-white/30 hover:bg-[#111] transition-all duration-500 group">
+              <span className="text-sm font-mono font-medium text-zinc-500 group-hover:text-white transition-colors duration-500 w-12 border-b sm:border-b-0 sm:border-r border-white/10 pb-4 sm:pb-0">{(idx + 1).toString().padStart(2, '0')}</span>
+              <p className="text-base md:text-lg font-medium text-zinc-200 tracking-wide group-hover:text-white transition-colors">
                 {point}
               </p>
             </div>

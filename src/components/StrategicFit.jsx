@@ -16,23 +16,26 @@ export default function StrategicFit() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center flex flex-col items-center mb-20"
+          className="text-center flex flex-col items-center mb-24"
         >
-          <div className="w-[1px] h-12 bg-white/30 mb-8" />
+          <div className="w-[1px] h-16 bg-white/40 mb-10" />
           <h2 className="text-3xl md:text-4xl font-display font-medium tracking-wide text-white">Target Acquirers</h2>
         </motion.div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, delay: 0.2 }}
         >
           {targets.map((target, idx) => (
-            <div key={idx} className="bg-[#0a0a0a] border border-white/20 p-10 hover:border-white/50 hover:bg-[#111111] transition-all duration-500 flex flex-col justify-center min-h-[200px] shadow-xl">
-               <h3 className="text-2xl font-medium tracking-wide text-white mb-4">{target.title}</h3>
-               <p className="text-base font-normal text-zinc-300 tracking-wide leading-relaxed">{target.description}</p>
+            <div key={idx} className="bg-[#0f0f0f] border border-white/10 p-12 hover:border-white/30 hover:bg-[#151515] transition-all duration-500 flex flex-col justify-start min-h-[260px] relative group">
+               <div className="w-12 h-12 rounded-none bg-[#111] border border-white/10 flex items-center justify-center mb-8 group-hover:border-white/40 transition-colors">
+                 <div className="w-3 h-3 bg-white/20 group-hover:bg-white transition-colors" />
+               </div>
+               <h3 className="text-2xl md:text-3xl font-medium tracking-wide text-white mb-5">{target.title}</h3>
+               <p className="text-base md:text-lg font-normal text-zinc-400 tracking-wide leading-relaxed">{target.description}</p>
             </div>
           ))}
         </motion.div>
