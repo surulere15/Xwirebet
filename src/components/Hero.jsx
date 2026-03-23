@@ -54,7 +54,7 @@ export default function Hero() {
             Initiate Discussion
           </a>
           <a href="#" className="w-full sm:w-auto px-12 py-4 bg-transparent border border-white/20 text-white font-medium tracking-wide hover:border-white transition-colors duration-500 text-center text-sm md:text-base">
-            Review Asset Prospectus
+            Review Acquisition Brief
           </a>
         </motion.div>
       </div>
