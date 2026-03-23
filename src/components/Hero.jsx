@@ -4,40 +4,40 @@ export default function Hero() {
   return (
     <section className="luxury-bg min-h-screen flex flex-col justify-center items-center px-6 relative">
       
-      {/* Atmospheric glow — dual layer */}
+      {/* Triple-layer atmospheric glow */}
       <div className="hero-glow" />
 
       {/* Liquid reflection floor */}
       <div className="liquid-layer" />
 
-      {/* Cinematic edge vignette */}
+      {/* Cinematic vignette — tighter, darker */}
       <div 
         className="absolute inset-0 pointer-events-none z-[1]"
         style={{
           background: `
             radial-gradient(
-              ellipse 75% 75% at 50% 50%,
-              transparent 30%,
-              rgba(0, 0, 0, 0.5) 100%
+              ellipse 70% 70% at 50% 48%,
+              transparent 25%,
+              rgba(0, 0, 0, 0.55) 100%
             )
           `
         }}
       />
 
-      {/* Horizontal glass horizon line (very subtle) */}
+      {/* Glass horizon — spatial depth marker */}
       <div 
         className="absolute left-0 right-0 pointer-events-none z-[1]"
         style={{
-          top: '62%',
+          top: '63%',
           height: '1px',
-          background: 'linear-gradient(90deg, transparent 15%, rgba(255,255,255,0.02) 40%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.02) 60%, transparent 85%)'
+          background: 'linear-gradient(90deg, transparent 18%, rgba(255,255,255,0.015) 35%, rgba(255,255,255,0.025) 50%, rgba(255,255,255,0.015) 65%, transparent 82%)'
         }}
       />
 
       <motion.div 
-        initial={{ opacity: 0, y: 6 }}
+        initial={{ opacity: 0, y: 5 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 2.4, ease: [0.16, 1, 0.3, 1] }}
         className="z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center"
       >
         {/* Wordmark */}
@@ -49,7 +49,7 @@ export default function Hero() {
         <motion.h2 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.8, delay: 0.5 }}
+          transition={{ duration: 2, delay: 0.5 }}
           className="subtitle-text text-[10.5px] md:text-[11px] uppercase tracking-[0.35em] font-medium mb-7"
         >
           PREDICTION MARKETS POWERED BY CRYPTO
@@ -59,28 +59,28 @@ export default function Hero() {
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.8, delay: 0.7 }}
-          className="text-[13px] md:text-[14px] text-zinc-600 max-w-sm font-sans font-light leading-[2] tracking-wide mb-16"
+          transition={{ duration: 2, delay: 0.7 }}
+          className="body-text text-[13px] md:text-[14px] max-w-sm font-sans font-light leading-[2] tracking-wide mb-16"
         >
           A premium brand positioned at the intersection of crypto infrastructure and event markets.
         </motion.p>
         
         {/* Button stack */}
         <motion.div 
-          initial={{ opacity: 0, y: 4 }}
+          initial={{ opacity: 0, y: 3 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.8, delay: 0.9 }}
-          className="flex flex-col items-center gap-3 w-full max-w-[260px]"
+          transition={{ duration: 2, delay: 0.95 }}
+          className="flex flex-col items-center gap-3 w-full max-w-[258px]"
         >
           <a 
             href="#" 
-            className="glass-btn glass-btn-primary w-full py-[15px] text-white/85 font-medium text-[10.5px] tracking-[0.22em] uppercase text-center relative z-10"
+            className="glass-btn glass-btn-primary w-full py-[15px] text-white/80 font-medium text-[10.5px] tracking-[0.22em] uppercase text-center relative z-10"
           >
             STRATEGIC ACCESS
           </a>
           <a 
             href="#" 
-            className="glass-btn glass-btn-secondary w-full py-[15px] text-zinc-500 font-medium text-[10.5px] tracking-[0.22em] uppercase hover:text-zinc-300 text-center relative z-10"
+            className="glass-btn glass-btn-secondary w-full py-[15px] text-zinc-500 font-medium text-[10.5px] tracking-[0.22em] uppercase hover:text-zinc-400 text-center relative z-10 transition-colors duration-700"
           >
             DOWNLOAD BRIEF
           </a>
@@ -91,7 +91,7 @@ export default function Hero() {
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 2.5, delay: 1.4 }}
+        transition={{ duration: 2.8, delay: 1.5 }}
         className="absolute bottom-10 left-0 w-full text-center z-10"
       >
         <span className="micro-copy text-[9px] uppercase tracking-[0.3em] font-medium">

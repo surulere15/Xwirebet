@@ -13,162 +13,168 @@
 }
 
 /* ═══════════════════════════════════════════════
-   WIREBET — LUXURY INTERFACE SYSTEM v2.0
-   Quiet black luxury · Smoked glass · Cinematic
+   WIREBET — LUXURY INTERFACE SYSTEM v2.1
    ═══════════════════════════════════════════════ */
 
-/* ── Atmospheric Background ── */
+/* ── Atmospheric Background ─────────────────── */
 .luxury-bg {
   background:
     radial-gradient(
-      ellipse 120% 60% at 50% 0%,
-      #080809 0%,
-      #040405 30%,
-      #020203 50%,
+      ellipse 100% 50% at 50% 0%,
+      #060607 0%,
+      #030304 25%,
+      #010102 45%,
       #000000 100%
     );
   position: relative;
   overflow: hidden;
 }
 
-/* Top atmospheric wash — very faint warm-neutral bloom */
+/* — Top haze — barely-there warmth above the wordmark */
 .luxury-bg::before {
   content: '';
   position: absolute;
-  top: -20%;
+  top: -25%;
   left: 50%;
   transform: translateX(-50%);
-  width: 160%;
-  height: 70%;
-  background: radial-gradient(
-    ellipse 45% 35% at 50% 50%,
-    rgba(200, 195, 185, 0.012) 0%,
-    rgba(180, 175, 170, 0.004) 45%,
-    transparent 70%
-  );
+  width: 180%;
+  height: 65%;
+  background:
+    radial-gradient(
+      ellipse 38% 28% at 50% 60%,
+      rgba(180, 175, 168, 0.01) 0%,
+      transparent 100%
+    );
   pointer-events: none;
   z-index: 1;
 }
 
-/* Bottom floor reflection — liquid glass pool */
+/* — Floor gradient — dark sink at the base */
 .luxury-bg::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 45%;
+  height: 50%;
   background:
     radial-gradient(
-      ellipse 70% 25% at 50% 100%,
-      rgba(255, 255, 255, 0.006) 0%,
-      rgba(255, 255, 255, 0.002) 50%,
-      transparent 70%
+      ellipse 65% 20% at 50% 100%,
+      rgba(255, 255, 255, 0.004) 0%,
+      transparent 60%
     ),
     linear-gradient(
       180deg,
       transparent 0%,
-      rgba(3, 3, 5, 0.6) 100%
+      rgba(2, 2, 3, 0.7) 100%
     );
   pointer-events: none;
   z-index: 1;
 }
 
-/* ── Hero Glow — controlled cinematic bloom ── */
+/* ── Hero Glow ──────────────────────────────── */
+/* Three concentric radials for soft, controlled bloom */
 .hero-glow {
   position: absolute;
-  top: 32%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 900px;
-  height: 450px;
+  width: 1000px;
+  height: 500px;
   background:
     radial-gradient(
-      ellipse 40% 30% at 50% 50%,
-      rgba(255, 255, 255, 0.018) 0%,
+      ellipse 30% 22% at 50% 50%,
+      rgba(255, 255, 255, 0.014) 0%,
       transparent 100%
     ),
     radial-gradient(
-      ellipse 60% 45% at 50% 50%,
+      ellipse 50% 38% at 50% 50%,
       rgba(255, 255, 255, 0.006) 0%,
       transparent 100%
+    ),
+    radial-gradient(
+      ellipse 70% 55% at 50% 50%,
+      rgba(255, 255, 255, 0.003) 0%,
+      transparent 100%
     );
-  filter: blur(80px);
+  filter: blur(90px);
   pointer-events: none;
   z-index: 1;
 }
 
-/* ── Wordmark Luminance — platinum gradient ── */
+/* ── Wordmark — platinum-to-smoke gradient ──── */
 .wordmark {
   text-shadow:
-    0 0 120px rgba(255, 255, 255, 0.025),
-    0 2px 40px rgba(0, 0, 0, 0.8);
+    0 0 100px rgba(255, 255, 255, 0.02),
+    0 4px 30px rgba(0, 0, 0, 0.9);
   background: linear-gradient(
-    175deg,
-    rgba(255, 255, 255, 0.97) 0%,
-    rgba(255, 255, 255, 0.82) 40%,
-    rgba(200, 198, 196, 0.58) 75%,
-    rgba(160, 158, 156, 0.45) 100%
+    176deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(220, 218, 216, 0.78) 35%,
+    rgba(170, 168, 165, 0.52) 65%,
+    rgba(130, 128, 126, 0.38) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* ── Smoked Glass Button System ── */
+/* ── Smoked Glass Button System ─────────────── */
 .glass-btn {
   position: relative;
   background:
     linear-gradient(
       178deg,
-      rgba(255, 255, 255, 0.035) 0%,
-      rgba(255, 255, 255, 0.012) 50%,
-      rgba(255, 255, 255, 0.018) 100%
+      rgba(255, 255, 255, 0.032) 0%,
+      rgba(255, 255, 255, 0.008) 45%,
+      rgba(255, 255, 255, 0.014) 100%
     );
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(16px) saturate(120%);
-  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(20px) saturate(130%) brightness(95%);
+  -webkit-backdrop-filter: blur(20px) saturate(130%) brightness(95%);
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.03) inset,
-    0 -1px 0 0 rgba(0, 0, 0, 0.2) inset,
-    0 4px 16px rgba(0, 0, 0, 0.3);
+    0 1px 0 0 rgba(255, 255, 255, 0.025) inset,
+    0 -1px 0 0 rgba(0, 0, 0, 0.3) inset,
+    0 1px 2px rgba(0, 0, 0, 0.2),
+    0 4px 16px rgba(0, 0, 0, 0.35),
+    0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Top-edge gloss line */
+/* Top-edge gloss — premium highlight bead */
 .glass-btn::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 10%;
-  right: 10%;
+  left: 12%;
+  right: 12%;
   height: 1px;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.08) 30%,
-    rgba(255, 255, 255, 0.12) 50%,
-    rgba(255, 255, 255, 0.08) 70%,
+    rgba(255, 255, 255, 0.06) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.06) 75%,
     transparent 100%
   );
-  opacity: 1;
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
   z-index: 2;
 }
 
-/* Surface gloss sweep on hover */
+/* Surface sweep — liquid gloss on hover */
 .glass-btn::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    178deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.01) 30%,
-    transparent 60%
-  );
+  background:
+    linear-gradient(
+      178deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.008) 25%,
+      transparent 55%
+    );
   opacity: 0;
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
@@ -178,27 +184,30 @@
   background:
     linear-gradient(
       178deg,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0.02) 50%,
-      rgba(255, 255, 255, 0.025) 100%
+      rgba(255, 255, 255, 0.048) 0%,
+      rgba(255, 255, 255, 0.016) 45%,
+      rgba(255, 255, 255, 0.022) 100%
     );
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.09);
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.05) inset,
-    0 -1px 0 0 rgba(0, 0, 0, 0.15) inset,
-    0 4px 24px rgba(0, 0, 0, 0.4),
-    0 0 40px rgba(255, 255, 255, 0.015);
+    0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
+    0 -1px 0 0 rgba(0, 0, 0, 0.25) inset,
+    0 1px 3px rgba(0, 0, 0, 0.25),
+    0 6px 24px rgba(0, 0, 0, 0.4),
+    0 16px 48px rgba(0, 0, 0, 0.2),
+    0 0 50px rgba(255, 255, 255, 0.01);
   transform: translateY(-0.5px);
 }
 
 .glass-btn:hover::before {
-  opacity: 1;
+  left: 8%;
+  right: 8%;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.12) 30%,
-    rgba(255, 255, 255, 0.18) 50%,
-    rgba(255, 255, 255, 0.12) 70%,
+    rgba(255, 255, 255, 0.08) 20%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.08) 80%,
     transparent 100%
   );
 }
@@ -207,115 +216,123 @@
   opacity: 1;
 }
 
-/* Primary button — stronger glass presence */
+/* Primary — slightly more glass presence */
 .glass-btn-primary {
-  border-color: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.08);
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
-    0 -1px 0 0 rgba(0, 0, 0, 0.25) inset,
-    0 4px 20px rgba(0, 0, 0, 0.35),
-    0 0 1px rgba(255, 255, 255, 0.05);
+    0 1px 0 0 rgba(255, 255, 255, 0.035) inset,
+    0 -1px 0 0 rgba(0, 0, 0, 0.35) inset,
+    0 1px 2px rgba(0, 0, 0, 0.2),
+    0 4px 20px rgba(0, 0, 0, 0.4),
+    0 12px 44px rgba(0, 0, 0, 0.18),
+    0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 .glass-btn-primary:hover {
-  border-color: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.13);
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.07) inset,
-    0 -1px 0 0 rgba(0, 0, 0, 0.2) inset,
-    0 8px 32px rgba(0, 0, 0, 0.5),
-    0 0 60px rgba(255, 255, 255, 0.02),
-    0 0 1px rgba(255, 255, 255, 0.08);
+    0 1px 0 0 rgba(255, 255, 255, 0.06) inset,
+    0 -1px 0 0 rgba(0, 0, 0, 0.3) inset,
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    0 20px 56px rgba(0, 0, 0, 0.22),
+    0 0 1px rgba(255, 255, 255, 0.06);
 }
 
-/* Secondary button — quieter, recessed */
+/* Secondary — recessed, quieter */
 .glass-btn-secondary {
   background:
     linear-gradient(
       178deg,
-      rgba(255, 255, 255, 0.018) 0%,
-      rgba(255, 255, 255, 0.006) 50%,
-      rgba(255, 255, 255, 0.01) 100%
+      rgba(255, 255, 255, 0.016) 0%,
+      rgba(255, 255, 255, 0.004) 45%,
+      rgba(255, 255, 255, 0.008) 100%
     );
-  border-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.035);
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.02) inset,
-    0 -1px 0 0 rgba(0, 0, 0, 0.15) inset,
-    0 4px 12px rgba(0, 0, 0, 0.25);
+    0 1px 0 0 rgba(255, 255, 255, 0.015) inset,
+    0 -1px 0 0 rgba(0, 0, 0, 0.2) inset,
+    0 1px 2px rgba(0, 0, 0, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.25),
+    0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
 .glass-btn-secondary::before {
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 .glass-btn-secondary:hover {
   background:
     linear-gradient(
       178deg,
-      rgba(255, 255, 255, 0.035) 0%,
-      rgba(255, 255, 255, 0.015) 50%,
-      rgba(255, 255, 255, 0.02) 100%
+      rgba(255, 255, 255, 0.032) 0%,
+      rgba(255, 255, 255, 0.012) 45%,
+      rgba(255, 255, 255, 0.016) 100%
     );
-  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.07);
   box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
-    0 -1px 0 0 rgba(0, 0, 0, 0.15) inset,
-    0 6px 24px rgba(0, 0, 0, 0.35),
-    0 0 1px rgba(255, 255, 255, 0.04);
+    0 1px 0 0 rgba(255, 255, 255, 0.03) inset,
+    0 -1px 0 0 rgba(0, 0, 0, 0.2) inset,
+    0 1px 3px rgba(0, 0, 0, 0.2),
+    0 6px 20px rgba(0, 0, 0, 0.3),
+    0 12px 36px rgba(0, 0, 0, 0.15);
 }
 
-.glass-btn-secondary::before {
-  opacity: 0.4;
-}
-
-/* ── Liquid Reflection Layer ── */
+/* ── Liquid Reflection Layer ────────────────── */
 .liquid-layer {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 280px;
+  height: 300px;
   background:
     linear-gradient(
       180deg,
       transparent 0%,
-      rgba(255, 255, 255, 0.003) 30%,
-      rgba(255, 255, 255, 0.006) 60%,
-      rgba(255, 255, 255, 0.003) 80%,
-      transparent 100%
+      rgba(255, 255, 255, 0.002) 25%,
+      rgba(255, 255, 255, 0.005) 50%,
+      rgba(255, 255, 255, 0.003) 75%,
+      rgba(255, 255, 255, 0.001) 100%
     );
   mask: linear-gradient(
     180deg,
     transparent 0%,
-    black 20%,
-    black 80%,
+    black 15%,
+    black 85%,
     transparent 100%
   );
   -webkit-mask: linear-gradient(
     180deg,
     transparent 0%,
-    black 20%,
-    black 80%,
+    black 15%,
+    black 85%,
     transparent 100%
   );
   pointer-events: none;
   z-index: 1;
 }
 
-/* ── Micro-copy treatment ── */
+/* ── Micro-copy ─────────────────────────────── */
 .micro-copy {
-  color: rgba(255, 255, 255, 0.14);
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.01);
+  color: rgba(255, 255, 255, 0.12);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.008);
 }
 
-/* ── Subtitle refinement ── */
+/* ── Subtitle — metallic horizontal gradient ── */
 .subtitle-text {
   background: linear-gradient(
     90deg,
-    rgba(161, 161, 170, 0.6) 0%,
-    rgba(161, 161, 170, 0.85) 50%,
-    rgba(161, 161, 170, 0.6) 100%
+    rgba(140, 140, 148, 0.55) 0%,
+    rgba(161, 161, 170, 0.8) 40%,
+    rgba(161, 161, 170, 0.8) 60%,
+    rgba(140, 140, 148, 0.55) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* ── Body text refinement ───────────────────── */
+.body-text {
+  color: rgba(113, 113, 122, 0.85);
 }
