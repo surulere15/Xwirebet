@@ -15,10 +15,10 @@ export default function Contact() {
             Acquisition Protocol
           </div>
           <h2 className="text-2xl md:text-4xl font-display font-normal text-white leading-relaxed max-w-2xl mb-8 tracking-wide">
-            Entertaining selective discussions with capitalized operators and strategic acquirers.
+            Open to selective discussions with qualified operators, founders, and strategic buyers.
           </h2>
           <p className="text-zinc-400 font-normal text-base tracking-wide">
-            Direct transfer framework available for qualified principals.
+            A direct and discreet review process is available for aligned buyers.
           </p>
         </motion.div>
 
