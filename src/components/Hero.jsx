@@ -94,7 +94,7 @@ export default function Hero() {
         className="absolute bottom-11 left-0 w-full text-center z-10"
       >
         <span className="micro-copy text-[9.5px] uppercase tracking-[0.36em] font-medium">
-          Private investment, partnership, and buyout discussions only.
+          Private investment, partnership, and acquisitions discussions only.
         </span>
       </motion.div>
     </section>
