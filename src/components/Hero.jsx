@@ -18,7 +18,7 @@ export default function Hero() {
             radial-gradient(
               ellipse 75% 75% at 50% 46%,
               transparent 32%,
-              rgba(0, 0, 0, 0.42) 100%
+              rgba(0, 0, 0, 0.38) 100%
             )
           `
         }}
@@ -30,14 +30,14 @@ export default function Hero() {
         style={{
           top: '63%',
           height: '1px',
-          background: 'linear-gradient(90deg, transparent 18%, rgba(255,255,255,0.022) 35%, rgba(255,255,255,0.032) 50%, rgba(255,255,255,0.022) 65%, transparent 82%)'
+          background: 'linear-gradient(90deg, transparent 18%, rgba(255,255,255,0.024) 35%, rgba(255,255,255,0.035) 50%, rgba(255,255,255,0.024) 65%, transparent 82%)'
         }}
       />
 
       <motion.div 
         initial={{ opacity: 0, y: 5 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2.4, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 2.6, ease: [0.16, 1, 0.3, 1] }}
         className="z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center"
       >
         {/* Wordmark (strongest) */}
@@ -49,18 +49,18 @@ export default function Hero() {
         <motion.h2 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 0.5 }}
-          className="subtitle-text text-[10.5px] md:text-[11.8px] uppercase tracking-[0.34em] font-medium mb-9"
+          transition={{ duration: 2.2, delay: 0.55 }}
+          className="subtitle-text text-[10.5px] md:text-[11.8px] uppercase tracking-[0.35em] font-medium mb-9"
         >
           PREDICTION MARKETS POWERED BY CRYPTO
         </motion.h2>
         
-        {/* Layer 3 — Body copy (100% Polish) */}
+        {/* Body Copy (polished) */}
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 0.7 }}
-          className="body-text text-[14px] md:text-[15px] max-w-[24rem] font-sans leading-[2] tracking-wide mb-16"
+          transition={{ duration: 2.2, delay: 0.75 }}
+          className="body-text text-[14px] md:text-[15.2px] max-w-[24.5rem] font-sans leading-[2.05] tracking-wide mb-16"
         >
           A premium brand positioned at the intersection of crypto infrastructure and event markets.
         </motion.p>
@@ -69,32 +69,32 @@ export default function Hero() {
         <motion.div 
           initial={{ opacity: 0, y: 3 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2, delay: 0.95 }}
+          transition={{ duration: 2.2, delay: 1.05 }}
           className="flex flex-col items-center gap-3 w-full max-w-[264px]"
         >
           <a 
             href="#" 
-            className="glass-btn glass-btn-primary w-full py-[16px] text-white/[0.94] font-medium text-[10.5px] tracking-[0.24em] uppercase text-center relative z-10"
+            className="glass-btn glass-btn-primary w-full py-[16px] text-white/[0.95] font-medium text-[10.5px] tracking-[0.24em] uppercase text-center relative z-10"
           >
             STRATEGIC ACCESS
           </a>
           <a 
             href="#" 
-            className="glass-btn glass-btn-secondary w-full py-[16px] text-[rgba(215,215,224,0.78)] font-medium text-[10.5px] tracking-[0.24em] uppercase hover:text-white text-center relative z-10 transition-colors duration-700"
+            className="glass-btn glass-btn-secondary w-full py-[16px] text-[rgba(220,220,230,0.8)] font-medium text-[10.5px] tracking-[0.24em] uppercase hover:text-white text-center relative z-10 transition-colors duration-700"
           >
             DOWNLOAD BRIEF
           </a>
         </motion.div>
       </motion.div>
 
-      {/* Bottom micro-copy */}
+      {/* LAYER 5 — MICRO-COPY (100% Polish) */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 2.8, delay: 1.5 }}
-        className="absolute bottom-10 left-0 w-full text-center z-10"
+        transition={{ duration: 3.2, delay: 1.65 }}
+        className="absolute bottom-11 left-0 w-full text-center z-10"
       >
-        <span className="micro-copy text-[9px] uppercase tracking-[0.32em] font-medium">
+        <span className="micro-copy text-[8.5px] md:text-[8.5px] uppercase tracking-[0.36em] font-medium">
           Private investment, partnership, and buyout discussions only.
         </span>
       </motion.div>

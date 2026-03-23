@@ -13,8 +13,8 @@
 }
 
 /* ═══════════════════════════════════════════════
-   WIREBET — LUXURY INTERFACE SYSTEM v3.2
-   "100% Polish" Body Authority Edition
+   WIREBET — LUXURY INTERFACE SYSTEM v3.3
+   "100% Polish" Micro-copy Authority Edition
    ═══════════════════════════════════════════════ */
 
 /* ── Atmospheric Background ─────────────────── */
@@ -59,13 +59,13 @@
   background:
     radial-gradient(
       ellipse 65% 20% at 50% 100%,
-      rgba(255, 255, 255, 0.004) 0%,
+      rgba(255, 255, 255, 0.005) 0%,
       transparent 60%
     ),
     linear-gradient(
       180deg,
       transparent 0%,
-      rgba(2, 2, 3, 0.6) 100%
+      rgba(2, 2, 3, 0.55) 100%
     );
   pointer-events: none;
   z-index: 1;
@@ -82,12 +82,12 @@
   background:
     radial-gradient(
       ellipse 28% 20% at 50% 50%,
-      rgba(255, 255, 255, 0.035) 0%,
+      rgba(255, 255, 255, 0.038) 0%,
       transparent 100%
     ),
     radial-gradient(
       ellipse 50% 38% at 50% 50%,
-      rgba(255, 255, 255, 0.012) 0%,
+      rgba(255, 255, 255, 0.015) 0%,
       transparent 100%
     ),
     radial-gradient(
@@ -100,44 +100,41 @@
   z-index: 1;
 }
 
-/* ── Wordmark — Silver Authority ─────────────── */
+/* ── Wordmark ───────────────────────────────── */
 .wordmark {
   text-shadow:
     0 0 60px rgba(255, 255, 255, 0.08),
-    0 0 140px rgba(255, 255, 255, 0.03),
+    0 0 140px rgba(255, 255, 255, 0.035),
     0 3px 15px rgba(0, 0, 0, 0.65);
   background: linear-gradient(
     178deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(250, 249, 248, 0.98) 25%,
-    rgba(228, 226, 223, 0.85) 55%,
-    rgba(200, 198, 195, 0.72) 100%
+    rgba(230, 228, 225, 0.85) 55%,
+    rgba(205, 203, 200, 0.72) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* ── Subtitle — Clear Focus ─────────────────── */
+/* ── Subtitle ───────────────────────────────── */
 .subtitle-text {
   background: linear-gradient(
     90deg,
-    rgba(175, 175, 182, 0.75) 0%,
-    rgba(215, 215, 224, 0.98) 35%,
-    rgba(215, 215, 224, 0.98) 65%,
-    rgba(175, 175, 182, 0.75) 100%
+    rgba(175, 175, 185, 0.75) 0%,
+    rgba(220, 220, 230, 0.98) 35%,
+    rgba(220, 220, 230, 0.98) 65%,
+    rgba(175, 175, 185, 0.75) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   LAYER 3 — BODY COPY (100% Polish)
-   "Significant legibility, soft authority"
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ── Body ───────────────────────────────────── */
 .body-text {
-  color: rgba(212, 212, 216, 0.78);
+  color: rgba(212, 212, 216, 0.8);
   text-shadow: 0 0 40px rgba(255, 255, 255, 0.015);
   font-weight: 350;
   letter-spacing: 0.04em;
@@ -177,29 +174,13 @@
     90deg,
     transparent 0%,
     rgba(255, 255, 255, 0.12) 25%,
-    rgba(255, 255, 255, 0.18) 50%,
+    rgba(255, 255, 255, 0.2) 50%,
     rgba(255, 255, 255, 0.12) 75%,
     transparent 100%
   );
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
   z-index: 2;
-}
-
-.glass-btn::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      178deg,
-      rgba(255, 255, 255, 0.06) 0%,
-      rgba(255, 255, 255, 0.015) 25%,
-      transparent 55%
-    );
-  opacity: 0;
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  pointer-events: none;
 }
 
 .glass-btn:hover {
@@ -214,19 +195,21 @@
   box-shadow:
     0 1px 0 0 rgba(255, 255, 255, 0.07) inset,
     0 -1px 0 0 rgba(0, 0, 0, 0.25) inset,
-    0 1px 3px rgba(0, 0, 0, 0.25),
-    0 6px 24px rgba(0, 0, 0, 0.4),
-    0 16px 48px rgba(0, 0, 0, 0.2),
-    0 0 50px rgba(255, 255, 255, 0.02);
-  transform: translateY(-0.5px);
+    0 2px 4px rgba(0, 0, 0, 0.25),
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 22px 64px rgba(0, 0, 0, 0.22);
 }
 
-.glass-btn-primary {
-  border-color: rgba(255, 255, 255, 0.14);
-}
-
-.glass-btn-secondary {
-  border-color: rgba(255, 255, 255, 0.08);
+/* ─────────────────────────────────────────────
+   LAYER 5 — MICRO-COPY (100% Polish)
+   "The Professional Whisper"
+   ───────────────────────────────────────────── */
+.micro-copy {
+  color: rgba(255, 255, 255, 0.22);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.015);
+  letter-spacing: 0.36em;
+  font-weight: 500;
+  opacity: 0.95; /* Control via rgba for luminance precision */
 }
 
 /* ── Liquid Reflection ───────────────────────── */
@@ -249,10 +232,4 @@
   -webkit-mask: linear-gradient(180deg, transparent 0%, black 15%, black 85%, transparent 100%);
   pointer-events: none;
   z-index: 1;
-}
-
-/* ── Micro-copy ────────────────────────────── */
-.micro-copy {
-  color: rgba(255, 255, 255, 0.25);
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.015);
 }
