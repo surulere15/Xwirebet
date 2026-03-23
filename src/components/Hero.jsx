@@ -2,62 +2,66 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden bg-background pt-32 pb-24 text-center">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/[0.02] blur-3xl rounded-full pointer-events-none" />
+    <section className="min-h-screen bg-[#050505] flex flex-col justify-center items-center px-6 relative overflow-hidden">
       
-      <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          className="mb-12"
-        >
-          <span className="px-6 py-2.5 rounded-sm border border-white/10 bg-white/[0.02] text-[10px] sm:text-xs font-medium tracking-[0.2em] uppercase text-zinc-300">
-            Private Acquisition Opportunity
-          </span>
-        </motion.div>
+      {/* Ultra subtle ambient center lighting */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_0%,rgba(0,0,0,0)_60%)] pointer-events-none" />
+
+      <div className="text-center z-10 w-full max-w-4xl mx-auto flex flex-col items-center">
         
         <motion.h1 
-          className="text-7xl md:text-[9rem] font-display font-light tracking-tighter text-white mb-8 leading-none"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.1, ease: 'easeOut' }}
+          className="text-5xl md:text-[8rem] lg:text-[10rem] font-display font-medium text-white tracking-[0.15em] leading-none mb-8 md:mb-12 ml-4 md:ml-8"
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, ease: 'easeOut' }}
         >
           WIREBET
         </motion.h1>
 
-        <motion.p 
-          className="text-xl md:text-3xl font-display text-zinc-200 font-light mb-8 leading-relaxed max-w-3xl mx-auto tracking-wide"
-          initial={{ opacity: 0, y: 20 }}
+        <motion.h2 
+          className="text-[10px] md:text-sm uppercase tracking-[0.3em] text-zinc-400 font-medium mb-8"
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
+          transition={{ duration: 1.2, delay: 0.4, ease: 'easeOut' }}
         >
-          A Definitive Brand Asset for the Next Era of Decentralized Wagering and Prediction Markets
-        </motion.p>
+          PREDICTION MARKETS POWERED BY CRYPTO
+        </motion.h2>
         
         <motion.p 
-          className="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto mb-16 font-sans font-normal leading-loose tracking-wide"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-sm md:text-base text-zinc-500 max-w-lg mx-auto font-sans font-normal leading-relaxed tracking-wide mb-16"
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
+          transition={{ duration: 1.2, delay: 0.6, ease: 'easeOut' }}
         >
-          Positioned at the intersection of instant settlement, prediction markets, and next-generation digital wagering.
+          A premium brand positioned at the intersection of crypto infrastructure and event markets.
         </motion.p>
         
         <motion.div 
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
-          initial={{ opacity: 0, y: 20 }}
+          className="flex flex-col items-center gap-5 w-full max-w-[280px] mx-auto"
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4, ease: 'easeOut' }}
+          transition={{ duration: 1.2, delay: 0.8, ease: 'easeOut' }}
         >
-          <a href="#contact" className="w-full sm:w-auto px-12 py-4 bg-white text-black font-medium tracking-wide hover:bg-zinc-200 transition-colors duration-500 text-center text-sm md:text-base border border-white">
-            Initiate Discussion
+          <a href="#" className="w-full px-10 py-4 border border-white/60 text-white font-medium text-[10px] md:text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-colors duration-500 text-center">
+            STRATEGIC ACCESS
           </a>
-          <a href="#" className="w-full sm:w-auto px-12 py-4 bg-transparent border border-white/20 text-white font-medium tracking-wide hover:border-white transition-colors duration-500 text-center text-sm md:text-base">
-            Review Acquisition Brief
+          <a href="#" className="w-full px-10 py-4 border border-white/10 text-zinc-400 font-medium text-[10px] md:text-xs tracking-[0.2em] uppercase hover:border-white/30 hover:text-white transition-colors duration-500 text-center">
+            DOWNLOAD BRIEF
           </a>
         </motion.div>
       </div>
+
+      <motion.div 
+        className="absolute bottom-12 left-0 right-0 text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5, delay: 1.4 }}
+      >
+        <span className="text-[10px] text-zinc-600 uppercase tracking-[0.2em] font-medium">
+          STRATEGIC COLLABORATION DISCUSSIONS ONLY.
+        </span>
+      </motion.div>
+
     </section>
   );
 }
