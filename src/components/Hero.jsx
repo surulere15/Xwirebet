@@ -36,12 +36,12 @@ export default function Hero() {
         </motion.p>
         
         <motion.p 
-          className="text-base md:text-lg text-zinc-500 max-w-2xl mx-auto mb-16 font-sans font-light leading-loose tracking-wide"
+          className="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto mb-16 font-sans font-normal leading-loose tracking-wide"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
         >
-          Positioned exclusively for tier-one operators scaling high-velocity transaction platforms and instant settlement infrastructure.
+          Positioned at the intersection of instant settlement, prediction markets, and next-generation digital wagering.
         </motion.p>
         
         <motion.div 
