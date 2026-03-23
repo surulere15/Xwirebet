@@ -205,11 +205,11 @@
    "The Professional Whisper"
    ───────────────────────────────────────────── */
 .micro-copy {
-  color: rgba(255, 255, 255, 0.22);
-  text-shadow: 0 0 30px rgba(255, 255, 255, 0.015);
+  color: rgba(255, 255, 255, 0.58);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.02);
   letter-spacing: 0.36em;
   font-weight: 500;
-  opacity: 0.95; /* Control via rgba for luminance precision */
+  opacity: 0.95; 
 }
 
 /* ── Liquid Reflection ───────────────────────── */

@@ -87,14 +87,13 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* LAYER 5 — MICRO-COPY (100% Polish) */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3.2, delay: 1.65 }}
         className="absolute bottom-11 left-0 w-full text-center z-10"
       >
-        <span className="micro-copy text-[8.5px] md:text-[8.5px] uppercase tracking-[0.36em] font-medium">
+        <span className="micro-copy text-[9.5px] uppercase tracking-[0.36em] font-medium">
           Private investment, partnership, and buyout discussions only.
         </span>
       </motion.div>
