@@ -4,33 +4,33 @@ export default function Hero() {
   return (
     <section className="luxury-bg min-h-screen flex flex-col justify-center items-center px-6 relative">
       
-      {/* Triple-layer atmospheric glow */}
+      {/* Atmospheric glow */}
       <div className="hero-glow" />
 
-      {/* Liquid reflection floor */}
+      {/* Liquid reflection */}
       <div className="liquid-layer" />
 
-      {/* Cinematic vignette */}
+      {/* Cinematic vignette — frames the content, doesn't choke it */}
       <div 
         className="absolute inset-0 pointer-events-none z-[1]"
         style={{
           background: `
             radial-gradient(
-              ellipse 72% 72% at 50% 48%,
-              transparent 28%,
-              rgba(0, 0, 0, 0.5) 100%
+              ellipse 74% 74% at 50% 47%,
+              transparent 30%,
+              rgba(0, 0, 0, 0.45) 100%
             )
           `
         }}
       />
 
-      {/* Glass horizon line */}
+      {/* Glass horizon */}
       <div 
         className="absolute left-0 right-0 pointer-events-none z-[1]"
         style={{
           top: '63%',
           height: '1px',
-          background: 'linear-gradient(90deg, transparent 18%, rgba(255,255,255,0.018) 35%, rgba(255,255,255,0.028) 50%, rgba(255,255,255,0.018) 65%, transparent 82%)'
+          background: 'linear-gradient(90deg, transparent 18%, rgba(255,255,255,0.02) 35%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.02) 65%, transparent 82%)'
         }}
       />
 
@@ -40,54 +40,54 @@ export default function Hero() {
         transition={{ duration: 2.4, ease: [0.16, 1, 0.3, 1] }}
         className="z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center"
       >
-        {/* Wordmark — commanding silver-white */}
-        <h1 className="wordmark text-6xl md:text-8xl lg:text-[9.5rem] font-display font-medium tracking-[0.12em] mb-7 leading-none select-none">
+        {/* LAYER 1 — Wordmark (strongest) */}
+        <h1 className="wordmark text-6xl md:text-8xl lg:text-[9.5rem] font-display font-medium tracking-[0.12em] mb-8 leading-none select-none">
           WIREBET
         </h1>
 
-        {/* Subtitle — readable metallic */}
+        {/* LAYER 2 — Subtitle (clear secondary) */}
         <motion.h2 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2, delay: 0.5 }}
-          className="subtitle-text text-[10.5px] md:text-[11px] uppercase tracking-[0.35em] font-medium mb-7"
+          className="subtitle-text text-[10.5px] md:text-[11.5px] uppercase tracking-[0.32em] font-medium mb-8"
         >
           PREDICTION MARKETS POWERED BY CRYPTO
         </motion.h2>
         
-        {/* Body — soft but legible */}
+        {/* LAYER 3 — Body copy (soft tertiary) */}
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2, delay: 0.7 }}
-          className="body-text text-[13px] md:text-[14px] max-w-sm font-sans font-light leading-[2] tracking-wide mb-16"
+          className="body-text text-[13.5px] md:text-[14.5px] max-w-[22rem] font-sans font-light leading-[1.95] tracking-wide mb-16"
         >
           A premium brand positioned at the intersection of crypto infrastructure and event markets.
         </motion.p>
         
-        {/* Button stack */}
+        {/* LAYER 4 — CTA buttons (action) */}
         <motion.div 
           initial={{ opacity: 0, y: 3 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2, delay: 0.95 }}
-          className="flex flex-col items-center gap-3 w-full max-w-[258px]"
+          className="flex flex-col items-center gap-3 w-full max-w-[260px]"
         >
           <a 
             href="#" 
-            className="glass-btn glass-btn-primary w-full py-[15px] text-white/90 font-medium text-[10.5px] tracking-[0.22em] uppercase text-center relative z-10"
+            className="glass-btn glass-btn-primary w-full py-[15px] text-white/[0.92] font-medium text-[10.5px] tracking-[0.22em] uppercase text-center relative z-10"
           >
             STRATEGIC ACCESS
           </a>
           <a 
             href="#" 
-            className="glass-btn glass-btn-secondary w-full py-[15px] text-zinc-400 font-medium text-[10.5px] tracking-[0.22em] uppercase hover:text-zinc-300 text-center relative z-10 transition-colors duration-700"
+            className="glass-btn glass-btn-secondary w-full py-[15px] text-[rgba(161,161,170,0.75)] font-medium text-[10.5px] tracking-[0.22em] uppercase hover:text-zinc-300 text-center relative z-10 transition-colors duration-700"
           >
             DOWNLOAD BRIEF
           </a>
         </motion.div>
       </motion.div>
 
-      {/* Bottom micro-copy */}
+      {/* LAYER 5 — Footer micro-copy (whisper) */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
