@@ -11,7 +11,15 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-5 order-3">
             <a href="#contact" className="text-zinc-700 text-[9px] uppercase tracking-[0.15em] hover:text-zinc-400 transition-colors duration-500">Inquire</a>
-            <a href="mailto:founder@wirebet.com" className="text-zinc-700 text-[9px] uppercase tracking-[0.15em] hover:text-zinc-400 transition-colors duration-500">Email</a>
+            <button
+              onClick={() => {
+                const e = ['f','o','u','n','d','e','r','@','w','i','r','e','b','e','t','.','c','o','m'];
+                window.location.href = 'mailto:' + e.join('');
+              }}
+              className="text-zinc-700 text-[9px] uppercase tracking-[0.15em] hover:text-zinc-400 transition-colors duration-500 bg-transparent border-none cursor-pointer p-0"
+            >
+              Email
+            </button>
           </div>
         </div>
       </div>

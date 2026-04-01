@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 const buyerTypes = [
   { value: "", label: "Select buyer type..." },
@@ -30,6 +31,51 @@ const LABEL = "text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-600 
 const CARD = "bg-[#0c0c0c] border border-white/[0.04] hover:border-white/[0.08] transition-all duration-700";
 
 export default function Contact() {
+  useEffect(() => {
+    const form = document.getElementById('offer-form');
+    const statusEl = document.getElementById('form-status');
+    const btn = document.getElementById('submit-btn');
+
+    if (!form) return;
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      btn.disabled = true;
+      btn.textContent = 'SUBMITTING...';
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        const res = await fetch('/api/submit-offer', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+          statusEl.className = 'mb-4 text-center text-[12px] tracking-[0.05em] py-3 text-green-400 bg-green-400/5 border border-green-400/10';
+          statusEl.textContent = '✓ Offer submitted. Check your email for confirmation.';
+          form.reset();
+        } else {
+          statusEl.className = 'mb-4 text-center text-[12px] tracking-[0.05em] py-3 text-red-400 bg-red-400/5 border border-red-400/10';
+          statusEl.textContent = result.error || 'Submission failed. Please try again.';
+        }
+      } catch {
+        statusEl.className = 'mb-4 text-center text-[12px] tracking-[0.05em] py-3 text-red-400 bg-red-400/5 border border-red-400/10';
+        statusEl.textContent = 'Network error. Please email founder@wirebet.com directly.';
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'SUBMIT OFFER';
+    };
+
+    form.addEventListener('submit', handleSubmit);
+    return () => form.removeEventListener('submit', handleSubmit);
+  }, []);
+
   return (
     <section id="contact" className="pt-20 pb-14 px-6 bg-[#030303] flex flex-col items-center border-t border-white/[0.05]">
       <div className="max-w-[1080px] mx-auto w-full">
@@ -67,7 +113,9 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] gap-4 items-start"
         >
-          <form action={import.meta.env.VITE_FORMSPREE_ENDPOINT} method="POST" className={`${CARD} p-8 md:p-9 text-left`}>
+          <form id="offer-form" className={`${CARD} p-8 md:p-9 text-left`}>
+
+            <div id="form-status" className="hidden mb-4 text-center text-[12px] tracking-[0.05em] py-3"></div>
 
             <div className="mb-6">
               <label className={LABEL}>Full Name</label>
@@ -118,7 +166,7 @@ export default function Contact() {
             </div>
 
             <div className="border-t border-white/[0.04] pt-6 flex items-center justify-between">
-              <button type="submit" className="px-14 py-[15px] bg-white text-black font-semibold tracking-[0.12em] text-[11px] uppercase hover:bg-zinc-100 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] transition-all duration-500 rounded-none">
+              <button type="submit" id="submit-btn" className="px-14 py-[15px] bg-white text-black font-semibold tracking-[0.12em] text-[11px] uppercase hover:bg-zinc-100 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] transition-all duration-500 rounded-none">
                 Submit Offer
               </button>
               <span className="text-[9px] uppercase tracking-[0.2em] text-zinc-700 hidden sm:block">Qualified acquirers only</span>
