@@ -33,35 +33,37 @@ const reasons = [
   }
 ];
 
+const CARD = "bg-[#0b0b0b] border border-white/[0.06] hover:border-white/[0.12] transition-all duration-700 relative overflow-hidden group";
+
 export default function WhyWirebet() {
   return (
-    <section className="py-32 md:py-40 px-6 bg-background text-center flex flex-col items-center border-t border-white/10">
-      <div className="max-w-5xl mx-auto w-full">
+    <section className="pt-20 pb-16 px-6 bg-background flex flex-col items-center border-t border-white/[0.06]">
+      <div className="max-w-[1100px] mx-auto w-full">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="mb-24 flex flex-col items-center"
+          className="mb-10 flex flex-col items-center text-center"
         >
-          <div className="w-[1px] h-16 bg-white/40 mb-10" />
-          <h2 className="text-3xl md:text-5xl font-display font-medium tracking-wide text-white">Why Wirebet Wins</h2>
+          <div className="w-[1px] h-10 bg-white/[0.20] mb-7" />
+          <h2 className="text-[2rem] md:text-[2.5rem] font-display font-medium tracking-[0.01em] text-white">Why Wirebet Wins</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {reasons.map((reason, idx) => (
             <motion.div 
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: idx * 0.1 }}
-              className="bg-[#0f0f0f] border border-white/[0.08] p-12 hover:border-white/20 hover:bg-[#121212] transition-all duration-700 ease-out flex flex-col items-start text-left relative overflow-hidden group"
+              transition={{ duration: 0.8, delay: idx * 0.08 }}
+              className={`${CARD} p-8`}
             >
-              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/[0.06] to-transparent group-hover:via-white/20 transition-all duration-700" />
-              <span className="text-xs font-mono text-zinc-400 mb-6 group-hover:text-zinc-300 transition-colors">{reason.label} {'//'}</span>
-              <h3 className="text-xl md:text-2xl font-display font-medium text-white mb-4 tracking-wide">{reason.title}</h3>
-              <p className="text-zinc-300 font-normal leading-relaxed tracking-wide text-base">{reason.description}</p>
+              <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/[0.06] to-transparent group-hover:via-white/[0.15] transition-all duration-700" />
+              <span className="text-[10px] font-mono text-zinc-600 mb-4 block">{reason.label}</span>
+              <h3 className="text-lg font-display font-medium text-white mb-3 tracking-[0.01em]">{reason.title}</h3>
+              <p className="text-[13px] text-zinc-400 leading-[1.65] tracking-[0.01em] max-w-[38ch]">{reason.description}</p>
             </motion.div>
           ))}
         </div>
