@@ -295,14 +295,14 @@
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: rgba(255, 255, 255, 0.35) !important;
-  background-color: #141414 !important;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 0 24px rgba(255, 255, 255, 0.015);
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  background-color: #121212 !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: rgba(160, 160, 170, 0.45);
+  color: rgba(130, 130, 140, 0.4);
 }
 
 /* ── Scrollbar ──────────────────────────────── */
