@@ -37,7 +37,7 @@ const CARD = "bg-[#0b0b0b] border border-white/[0.06] hover:border-white/[0.12] 
 
 export default function WhyWirebet() {
   return (
-    <section className="pt-20 pb-16 px-6 bg-background flex flex-col items-center border-t border-white/[0.06]">
+    <section className="pt-20 pb-16 px-6 bg-[#030303] flex flex-col items-center border-t border-white/[0.06]">
       <div className="max-w-[1100px] mx-auto w-full">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

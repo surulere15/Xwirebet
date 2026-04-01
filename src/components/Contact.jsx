@@ -27,7 +27,7 @@ const includedItems = [
 
 const FIELD = "w-full bg-[#111] border border-white/[0.12] px-5 py-[13px] text-white text-[15px] focus:outline-none focus:border-white/35 focus:bg-[#141414] transition-all duration-500 rounded-none tracking-wide";
 const LABEL = "text-[11px] uppercase tracking-[0.18em] font-medium text-zinc-500 block mb-3";
-const CARD = "bg-[#0b0b0b] border border-white/[0.06] hover:border-white/[0.10] transition-all duration-700";
+const CARD = "bg-[#0b0b0b] border border-white/[0.06] hover:border-white/[0.12] transition-all duration-700";
 
 export default function Contact() {
   return (

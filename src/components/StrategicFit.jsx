@@ -23,7 +23,7 @@ const CARD = "bg-[#0b0b0b] border border-white/[0.06] hover:border-white/[0.12] 
 
 export default function StrategicFit() {
   return (
-    <section className="pt-20 pb-16 px-6 bg-background flex flex-col items-center border-t border-white/[0.06]">
+    <section className="pt-20 pb-16 px-6 bg-[#030303] flex flex-col items-center border-t border-white/[0.06]">
       <div className="max-w-[1100px] mx-auto w-full">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export default function StrategicFit() {
           {acquirers.map((acquirer, idx) => (
             <div key={idx} className={`${CARD} p-8`}>
               <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/[0.06] to-transparent group-hover:via-white/[0.15] transition-all duration-700" />
-              <div className="w-8 h-8 bg-[#111] border border-white/[0.06] flex items-center justify-center mb-6 group-hover:border-white/[0.15] transition-all duration-500">
+              <div className="w-8 h-8 bg-[#0d0d0d] border border-white/[0.06] flex items-center justify-center mb-6 group-hover:border-white/[0.15] transition-all duration-500">
                 <div className="w-2 h-2 bg-white/[0.15] group-hover:bg-white/50 transition-all duration-500" />
               </div>
               <h3 className="text-[17px] font-medium tracking-[0.01em] text-white mb-3">{acquirer.title}</h3>
