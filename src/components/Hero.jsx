@@ -4,34 +4,19 @@ export default function Hero() {
   return (
     <section className="luxury-bg min-h-screen flex flex-col justify-center items-center px-6 relative">
       
-      {/* Atmospheric glow */}
       <div className="hero-glow" />
-
-      {/* Liquid reflection */}
       <div className="liquid-layer" />
 
-      {/* Cinematic vignette */}
       <div 
         className="absolute inset-0 pointer-events-none z-[1]"
         style={{
-          background: `
-            radial-gradient(
-              ellipse 75% 75% at 50% 46%,
-              transparent 32%,
-              rgba(0, 0, 0, 0.38) 100%
-            )
-          `
+          background: `radial-gradient(ellipse 75% 75% at 50% 46%, transparent 32%, rgba(0, 0, 0, 0.38) 100%)`
         }}
       />
 
-      {/* Glass horizon */}
       <div 
         className="absolute left-0 right-0 pointer-events-none z-[1]"
-        style={{
-          top: '63%',
-          height: '1px',
-          background: 'linear-gradient(90deg, transparent 18%, rgba(255,255,255,0.024) 35%, rgba(255,255,255,0.035) 50%, rgba(255,255,255,0.024) 65%, transparent 82%)'
-        }}
+        style={{ top: '63%', height: '1px', background: 'linear-gradient(90deg, transparent 18%, rgba(255,255,255,0.024) 35%, rgba(255,255,255,0.035) 50%, rgba(255,255,255,0.024) 65%, transparent 82%)' }}
       />
 
       <motion.div 
@@ -40,12 +25,20 @@ export default function Hero() {
         transition={{ duration: 2.6, ease: [0.16, 1, 0.3, 1] }}
         className="z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center"
       >
-        {/* Wordmark (strongest) */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.3 }}
+          className="mb-6 flex items-center gap-3 px-4 py-2 border border-white/10 rounded-full bg-white/[0.02]"
+        >
+          <span className="w-2 h-2 rounded-full bg-green-500/80 animate-pulse"></span>
+          <span className="text-[9px] uppercase tracking-[0.3em] text-zinc-400">Premium .com · Dubai-Based · Pre-Revenue</span>
+        </motion.div>
+
         <h1 className="wordmark text-6xl md:text-8xl lg:text-[9.5rem] font-display font-medium tracking-[0.12em] mb-9 leading-none select-none">
           WIREBET
         </h1>
 
-        {/* Subtitle (clear focus) */}
         <motion.h2 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -55,7 +48,6 @@ export default function Hero() {
           PREDICTION MARKETS POWERED BY CRYPTO
         </motion.h2>
         
-        {/* Body Copy (polished) */}
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -65,24 +57,17 @@ export default function Hero() {
           A premium brand positioned at the intersection of crypto infrastructure and event markets.
         </motion.p>
         
-        {/* Button stack */}
         <motion.div 
           initial={{ opacity: 0, y: 3 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2.2, delay: 1.05 }}
           className="flex flex-col items-center gap-3 w-full max-w-[264px]"
         >
-          <a 
-            href="#" 
-            className="glass-btn glass-btn-primary w-full py-[16px] text-white/[0.95] font-medium text-[10.5px] tracking-[0.24em] uppercase text-center relative z-10"
-          >
-            STRATEGIC ACCESS
+          <a href="#contact" className="glass-btn glass-btn-primary w-full py-[16px] text-white/[0.95] font-medium text-[10.5px] tracking-[0.24em] uppercase text-center relative z-10">
+            FOUNDER ACCESS
           </a>
-          <a 
-            href="#" 
-            className="glass-btn glass-btn-secondary w-full py-[16px] text-[rgba(220,220,230,0.8)] font-medium text-[10.5px] tracking-[0.24em] uppercase hover:text-white text-center relative z-10 transition-colors duration-700"
-          >
-            DOWNLOAD BRIEF
+          <a href="#contact" className="glass-btn glass-btn-secondary w-full py-[16px] text-[rgba(220,220,230,0.8)] font-medium text-[10.5px] tracking-[0.24em] uppercase hover:text-white text-center relative z-10 transition-colors duration-700">
+            STRATEGIC BRIEF
           </a>
         </motion.div>
       </motion.div>
