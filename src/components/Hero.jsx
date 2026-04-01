@@ -54,7 +54,7 @@ export default function Hero() {
           transition={{ duration: 2.2, delay: 0.75 }}
           className="body-text text-[14px] md:text-[15.2px] max-w-[24.5rem] font-sans leading-[2.05] tracking-wide mb-16"
         >
-          A premium brand positioned at the intersection of crypto infrastructure and event markets.
+          A premium brand positioned at the intersection of crypto infrastructure and event markets. This domain represents a rare .com opportunity for the right operator.
         </motion.p>
         
         <motion.div 
