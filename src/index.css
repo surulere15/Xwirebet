@@ -5,16 +5,29 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-black text-white font-sans antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  ::selection {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #fff;
+  }
+  ::-moz-selection {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #fff;
+  }
+  input, textarea, select {
+    caret-color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 /* ═══════════════════════════════════════════════
-   WIREBET — LUXURY INTERFACE SYSTEM v3.3
-   "100% Polish" Micro-copy Authority Edition
+   WIREBET — LUXURY INTERFACE SYSTEM v3.4
    ═══════════════════════════════════════════════ */
 
 /* ── Atmospheric Background ─────────────────── */
@@ -116,16 +129,21 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wordmark:hover {
+  filter: brightness(1.06);
 }
 
 /* ── Subtitle ───────────────────────────────── */
 .subtitle-text {
   background: linear-gradient(
     90deg,
-    rgba(175, 175, 185, 0.75) 0%,
-    rgba(220, 220, 230, 0.98) 35%,
-    rgba(220, 220, 230, 0.98) 65%,
-    rgba(175, 175, 185, 0.75) 100%
+    rgba(190, 190, 200, 0.88) 0%,
+    rgba(235, 235, 240, 1) 30%,
+    rgba(235, 235, 240, 1) 70%,
+    rgba(190, 190, 200, 0.88) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -134,7 +152,7 @@
 
 /* ── Body ───────────────────────────────────── */
 .body-text {
-  color: rgba(212, 212, 216, 0.85);
+  color: rgba(212, 212, 216, 1);
   text-shadow: 0 0 40px rgba(255, 255, 255, 0.015);
   font-weight: 350;
   letter-spacing: 0.04em;
@@ -183,6 +201,27 @@
   z-index: 2;
 }
 
+.glass-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.02) 40%,
+    rgba(255, 255, 255, 0.04) 50%,
+    rgba(255, 255, 255, 0.02) 60%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  transition: left 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .glass-btn:hover {
   background:
     linear-gradient(
@@ -191,7 +230,7 @@
       rgba(255, 255, 255, 0.035) 45%,
       rgba(255, 255, 255, 0.045) 100%
     );
-  border-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.18);
   box-shadow:
     0 1px 0 0 rgba(255, 255, 255, 0.07) inset,
     0 -1px 0 0 rgba(0, 0, 0, 0.25) inset,
@@ -200,16 +239,19 @@
     0 22px 64px rgba(0, 0, 0, 0.22);
 }
 
+.glass-btn:hover::after {
+  left: 130%;
+}
+
 /* ─────────────────────────────────────────────
-   LAYER 5 — MICRO-COPY (100% Polish)
-   "The Professional Whisper"
+   MICRO-COPY
    ───────────────────────────────────────────── */
 .micro-copy {
-  color: rgba(255, 255, 255, 0.58);
+  color: rgba(255, 255, 255, 0.72);
   text-shadow: 0 0 30px rgba(255, 255, 255, 0.02);
   letter-spacing: 0.36em;
   font-weight: 500;
-  opacity: 0.95; 
+  opacity: 1;
 }
 
 /* ── Liquid Reflection ───────────────────────── */
@@ -232,4 +274,61 @@
   -webkit-mask: linear-gradient(180deg, transparent 0%, black 15%, black 85%, transparent 100%);
   pointer-events: none;
   z-index: 1;
+}
+
+/* ── Grain Texture ──────────────────────────── */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ── Form Input Focus ───────────────────────── */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  background-color: #161616 !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 0 20px rgba(255, 255, 255, 0.02);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(160, 160, 170, 0.5);
+}
+
+/* ── Scrollbar ──────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ── Section Divider Glow ───────────────────── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 5%,
+    rgba(255, 255, 255, 0.06) 30%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.06) 70%,
+    transparent 95%
+  );
 }

@@ -29,10 +29,10 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, delay: 0.3 }}
-          className="mb-6 flex items-center gap-3 px-4 py-2 border border-white/10 rounded-full bg-white/[0.02]"
+          className="mb-6 flex items-center gap-3 px-5 py-2.5 border border-white/[0.12] rounded-full bg-white/[0.03] hover:border-white/20 hover:bg-white/[0.04] transition-all duration-700 cursor-default"
         >
-          <span className="w-2 h-2 rounded-full bg-green-500/80 animate-pulse"></span>
-          <span className="text-[9px] uppercase tracking-[0.3em] text-zinc-400">Premium .com · Dubai-Based · Pre-Revenue</span>
+          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+          <span className="text-[9px] uppercase tracking-[0.3em] text-zinc-300 font-medium">Rare One-Word .com · Category-Aligned · Available for Acquisition</span>
         </motion.div>
 
         <h1 className="wordmark text-6xl md:text-8xl lg:text-[9.5rem] font-display font-medium tracking-[0.12em] mb-9 leading-none select-none">
@@ -45,30 +45,30 @@ export default function Hero() {
           transition={{ duration: 2.2, delay: 0.55 }}
           className="subtitle-text text-[10.5px] md:text-[11.8px] uppercase tracking-[0.35em] font-medium mb-9"
         >
-          PREDICTION MARKETS POWERED BY CRYPTO
+          A RARE ONE-WORD .COM BUILT FOR PREDICTION MARKETS, CRYPTO-NATIVE TRADING, AND MODERN WAGERING PLATFORMS
         </motion.h2>
         
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2.2, delay: 0.75 }}
-          className="body-text text-[14px] md:text-[15.2px] max-w-[24.5rem] font-sans leading-[2.05] tracking-wide mb-16"
+          className="body-text text-[14px] md:text-[15.2px] max-w-[28rem] font-sans leading-[2.05] tracking-wide mb-16"
         >
-          A premium brand positioned at the intersection of crypto infrastructure and event markets. This domain represents a rare .com opportunity for the right operator.
+          Instant category signal. Stronger recall. Premium market positioning from day one.
         </motion.p>
         
         <motion.div 
           initial={{ opacity: 0, y: 3 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2.2, delay: 1.05 }}
-          className="flex flex-col items-center gap-3 w-full max-w-[264px]"
+          className="flex flex-col items-center gap-5 w-full max-w-[280px]"
         >
-          <a href="#contact" className="glass-btn glass-btn-primary w-full py-[16px] text-white/[0.95] font-medium text-[10.5px] tracking-[0.24em] uppercase text-center relative z-10">
-            FOUNDER ACCESS
+          <a href="#contact" className="glass-btn glass-btn-primary w-full py-[16px] text-white font-medium text-[10.5px] tracking-[0.24em] uppercase text-center relative z-10">
+            MAKE AN OFFER
           </a>
-          <a href="#contact" className="glass-btn glass-btn-secondary w-full py-[16px] text-[rgba(220,220,230,0.8)] font-medium text-[10.5px] tracking-[0.24em] uppercase hover:text-white text-center relative z-10 transition-colors duration-700">
-            STRATEGIC BRIEF
-          </a>
+          <span className="text-[10px] uppercase tracking-[0.2em] text-zinc-400">
+            Serious inquiries only. Founder-led review.
+          </span>
         </motion.div>
       </motion.div>
 
@@ -79,7 +79,7 @@ export default function Hero() {
         className="absolute bottom-11 left-0 w-full text-center z-10"
       >
         <span className="micro-copy text-[9.5px] uppercase tracking-[0.36em] font-medium">
-          Private investment, partnership, and acquisitions discussions only.
+          Serious acquisition discussions are limited. Once placed, this asset is unavailable.
         </span>
       </motion.div>
     </section>

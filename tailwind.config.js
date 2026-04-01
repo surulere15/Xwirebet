@@ -8,13 +8,6 @@ export default {
     extend: {
       colors: {
         background: '#08080A',
-        surface: '#121216',
-        surfaceHighlight: '#1A1A1F',
-        accent: '#E5BE73',
-        primaryText: '#F3F4F6',
-        secondaryText: '#9CA3AF',
-        tertiaryText: '#4B5563',
-        border: '#27272A',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
