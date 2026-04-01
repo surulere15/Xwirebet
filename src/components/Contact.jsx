@@ -31,6 +31,8 @@ const LABEL = "text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-600 
 const CARD = "bg-[#0c0c0c] border border-white/[0.04] hover:border-white/[0.08] transition-all duration-700";
 
 export default function Contact() {
+  const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT || '';
+
   useEffect(() => {
     const form = document.getElementById('offer-form');
     const statusEl = document.getElementById('form-status');
@@ -44,28 +46,26 @@ export default function Contact() {
       btn.textContent = 'SUBMITTING...';
 
       const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
 
       try {
-        const res = await fetch('/api/submit-offer', {
+        const res = await fetch(formspreeEndpoint || form.action, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
+          body: formData,
+          headers: { 'Accept': 'application/json' },
         });
-
-        const result = await res.json();
 
         if (res.ok) {
           statusEl.className = 'mb-4 text-center text-[12px] tracking-[0.05em] py-3 text-green-400 bg-green-400/5 border border-green-400/10';
           statusEl.textContent = '✓ Offer submitted. Check your email for confirmation.';
           form.reset();
         } else {
+          const result = await res.json().catch(() => ({}));
           statusEl.className = 'mb-4 text-center text-[12px] tracking-[0.05em] py-3 text-red-400 bg-red-400/5 border border-red-400/10';
-          statusEl.textContent = result.error || 'Submission failed. Please try again.';
+          statusEl.textContent = result.errors?.[0]?.message || 'Submission failed. Please try again.';
         }
       } catch {
         statusEl.className = 'mb-4 text-center text-[12px] tracking-[0.05em] py-3 text-red-400 bg-red-400/5 border border-red-400/10';
-        statusEl.textContent = 'Network error. Please email founder@wirebet.com directly.';
+        statusEl.textContent = 'Network error. Please try again.';
       }
 
       btn.disabled = false;
@@ -113,7 +113,7 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] gap-4 items-start"
         >
-          <form id="offer-form" className={`${CARD} p-8 md:p-9 text-left`}>
+          <form id="offer-form" action={formspreeEndpoint} method="POST" className={`${CARD} p-8 md:p-9 text-left`}>
 
             <div id="form-status" className="hidden mb-4 text-center text-[12px] tracking-[0.05em] py-3"></div>
 
