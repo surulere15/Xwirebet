@@ -1,16 +1,53 @@
-# React + Vite
+# Wirebet — Institutional Prediction Market Branding
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, conversion-optimized landing page designed for the strategic acquisition of the **wirebet.com** domain. Engineered for top-tier prediction market operators and high-stakes digital wagering brands.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+-   **Telegram Lead Intelligence**: Real-time acquisition alerts via Telegram Bot API with automated failover.
+-   **Hardened Form Logic**: Multi-step lead capture with real-time currency formatting and data sanitization.
+-   **Strategic Imagery**: High-fidelity, domain-branded visuals for target market categories.
+-   **Production-Ready Backend**: Express.js server with SMTP integration, rate-limiting, and security hardening (Helmet).
+-   **Performance Focused**: Built with Vite, React, and Framer Motion for sub-second load times and fluid transitions.
+-   **SEO & PWA Ready**: Optimized meta tags, automated sitemap generation, and manifest configuration.
 
-## React Compiler
+## 🛠️ Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   **Frontend**: React, Vite, Tailwind CSS, Framer Motion
+-   **Backend**: Node.js, Express.js
+-   **Services**: Telegram Bot API (Notifications), Nodemailer (SMTP)
+-   **Security**: Helmet.js, Express Rate Limit, Sanitize-HTML
 
-## Expanding the ESLint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Installation
+Clone the repository and install dependencies:
+```bash
+git clone https://github.com/surulere15/Xwirebet.git
+cd Xwirebet
+npm install
+```
+
+### 2. Environment Configuration
+Create a `.env` file based on `.env.example`:
+```env
+PORT=3006
+FOUNDER_EMAIL=your@email.com
+SMTP_USER=your-smtp-user
+SMTP_PASS=your-smtp-password
+TELEGRAM_BOT_TOKEN=your-bot-token
+TELEGRAM_CHAT_ID=your-chat-id
+```
+
+### 3. Development
+Run the development server:
+```bash
+# Start frontend
+npm run dev
+
+# Start backend
+node server.mjs
+```
+
+## 📄 License
+Internal / Private - Branding and Intellectual Property of Wirebet.

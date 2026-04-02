@@ -61,7 +61,7 @@ export default function WhyWirebet() {
               className={`${CARD} p-7`}
             >
               <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/[0.04] to-transparent group-hover:via-white/[0.10] transition-all duration-700" />
-              <span className="text-[10px] font-mono text-zinc-700 mb-3.5 block">{reason.label}</span>
+              <span className="text-[10px] font-mono text-zinc-500 mb-3.5 block">{reason.label}</span>
               <h3 className="text-[15px] font-display font-medium text-white mb-2.5 tracking-[0.01em]">{reason.title}</h3>
               <p className="text-[12.5px] text-zinc-500 leading-[1.6] tracking-[0.01em]">{reason.description}</p>
             </motion.div>
